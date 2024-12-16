@@ -76,3 +76,120 @@ document.querySelector('.contact-form').addEventListener('submit', function (e) 
     alert('Please fill in all the fields.');
   }
 });
+
+
+// Get all tabs and categories
+const tabs = document.querySelectorAll('.tab');
+const categories = document.querySelectorAll('.faq-category');
+
+// Add click event to tabs
+tabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    // Remove active class from all tabs
+    tabs.forEach((t) => t.classList.remove('active'));
+    // Add active class to clicked tab
+    tab.classList.add('active');
+
+    // Hide all categories
+    categories.forEach((category) => category.classList.remove('active'));
+    // Show the category corresponding to the clicked tab
+    const target = document.getElementById(tab.getAttribute('data-tab'));
+    target.classList.add('active');
+  });
+});
+
+
+
+// Select elements
+const addToCartButtons = document.querySelectorAll('.add-to-cart');
+const cartItemsContainer = document.querySelector('.cart-items');
+const totalElement = document.querySelector('.total');
+const discountElement = document.querySelector('.discount');
+const checkoutButton = document.querySelector('.checkout');
+
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+// Update Cart UI
+function updateCart() {
+  cartItemsContainer.innerHTML = '';
+  let total = 0;
+  let discount = 0;
+
+  cart.forEach((item, index) => {
+    const li = document.createElement('li');
+    li.innerHTML = `
+      ${item.name} - $${item.price} 
+      <button onclick="removeItem(${index})">Remove</button>
+    `;
+    cartItemsContainer.appendChild(li);
+    total += item.price;
+  });
+
+  // Calculate discount
+  if (total > 500) {
+    discount = 0.1 * total; // 10% discount
+    discountElement.textContent = `Discount: $${discount.toFixed(2)}`;
+  } else {
+    discountElement.textContent = '';
+  }
+
+  total -= discount;
+  totalElement.textContent = `Total: $${total.toFixed(2)}`;
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+// Add item to cart
+addToCartButtons.forEach(button => {
+  button.addEventListener('click', (e) => {
+    const productCard = e.target.closest('.product-card');
+    const id = productCard.getAttribute('data-id');
+    const name = productCard.getAttribute('data-name');
+    const price = parseFloat(productCard.getAttribute('data-price'));
+
+    cart.push({ id, name, price });
+    updateCart();
+  });
+});
+
+// Remove item from cart
+function removeItem(index) {
+  cart.splice(index, 1);
+  updateCart();
+}
+
+// Checkout functionality
+checkoutButton.addEventListener('click', () => {
+  alert('Thank you for your purchase!');
+  cart = [];
+  updateCart();
+});
+
+// Initial cart load
+updateCart();
+
+
+
+// Back to Top Button
+const backToTopButton = document.getElementById('backToTop');
+
+// Show button when scrolled down
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 200) {
+    backToTopButton.classList.add('show');
+  } else {
+    backToTopButton.classList.remove('show');
+  }
+});
+
+// Scroll to top functionality
+backToTopButton.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Newsletter Subscription (Demo)
+const newsletterForm = document.getElementById('newsletter-form');
+newsletterForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  alert('Thank you for subscribing to our newsletter!');
+  newsletterForm.reset();
+});

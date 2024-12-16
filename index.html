@@ -37,8 +37,8 @@
 
   <section id="explore">
     <div class="explore-header">
-      <h2>Explore Our Designs</h2>
-      <img src="marker.png" alt="marker.png" class="line">
+        <i class="fas fa-compass icon"></i>
+      <h2>Explore Our Designs </h2>
       <p>Discover stunning interiors tailored to your taste. Let us help you create the space of your dream</p>
     </div>
     <div class="explore-grid">
@@ -71,8 +71,8 @@
 
   <section id="services">
     <section class="services-section">
+        <i class="fa-solid fa-palette symbol"></i>
       <h2>Our Services</h2>
-      <img src="marker.png" alt="marker.png" class="line">
       <div class="services-container">
         <div class="service-card">
           <img src="consult.jpeg" alt="Interior Design Consultation">
@@ -109,8 +109,8 @@
   </section>
 
   <section class="blog-section" id="blog">
+      <i class="fas fa-pen icon"></i>
     <h2>Latest Blog Post</h2>
-    <img src="marker.png" alt="marker.png" class="line-under">
     <p class="blog-description">
       Stay inspired with our tips, trends, and ideas for your home.
     </p>
@@ -120,8 +120,8 @@
   </section>
 
   <section id="testimonials" class="testimonials">
+      <i class="fas fa-star symbol"></i>
     <h2>Hear From Our Clients</h2>
-    <img src="marker.png" alt="marker.png" class="line">
     <div class="single-testimonial">
       <blockquote>
         <p>"DesignX brought my vision to life with impeccable taste and design.I couldn't be happier with the results!"
@@ -149,8 +149,8 @@
 
   <section class="contact-section">
     <div class="contact-content">
+        <i class="fas fa-envelope-circle-check icon"></i>
       <h2>Get in Touch</h2>
-      <img src="marker.png" alt="marker.png" class="line-under">
       <p>We’d love to hear from you! Feel free to drop us a message or visit our office.</p>
 
       <div class="contact-container">
@@ -181,50 +181,124 @@
     </div>
   </section>
 
-  <section id="faq" class="faq-section">
-    <h2>Frequently Asked Questions</h2>
+<section id="faq" class="faq-section">
+    <i class="fas fa-lightbulb symbol"></i>
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-container">
+    <!-- Tabs -->
+    <div class="faq-tabs">
+      <button class="tab active" data-tab="general">General</button>
+      <button class="tab" data-tab="services">Services</button>
+      <button class="tab" data-tab="pricing">Pricing</button>
+    </div>
 
-    <div class="faq-container">
-
-      <div class="faq-tabs">
-        <button class="tab active" data-tab="general">General</button>
-        <button class="tab" data-tab="services">Services</button>
-        <button class="tab" data-tab="pricing">Pricing</button>
+    <!-- FAQ Content -->
+    <div class="faq-content">
+      <!-- General FAQs -->
+      <div class="faq-category active" id="general">
+        <div class="faq-item">
+          <h3>What is Interior Decoration?</h3>
+          <p>Interior decoration involves designing and styling spaces to enhance their beauty, functionality, and comfort.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Why should I hire an interior decorator?</h3>
+          <p>Interior decorators bring expertise and creativity to transform your space while saving you time and effort.</p>
+        </div>
       </div>
 
-      <div class="faq-content">
-        <div class="faq-category active" id="general">
-          <div class="faq-item">
-            <h3>What is Interior Decoration?</h3>
-            <p>Interior decorators bring expertise and creativity to transform your space while saving you time and
-              effort</p>
-          </div>
+      <!-- Services FAQs -->
+      <div class="faq-category" id="services">
+        <div class="faq-item">
+          <h3>What services do you offer?</h3>
+          <p>We offer residential and commercial interior design, color consultations, furniture selection, and space planning.</p>
         </div>
-
-        <div class="faq-category" id="services">
-          <div class="faq-item">
-            <h3>What services do you offer?</h3>
-            <p>We offer residential and commercial interior desig, color consultations, furnitureSelection and space
-              planning</p>
-          </div>
-          <div class="faq-item">
-            <h3>Do you offer consultations?</h3>
-            <p>Yes, we provide in-person and virtual consultations to discuss your design goals and preferences</p>
-          </div>
+        <div class="faq-item">
+          <h3>Do you offer consultations?</h3>
+          <p>Yes, we provide in-person and virtual consultations to discuss your design goals and preferences.</p>
         </div>
+      </div>
 
-        <div class="faq-category" id="pricing">
-          <div class="faq-item">
-            <h3>How much does your services cost?</h3>
-            <p>Our pricing depends on the scope of the project. Contact us for a personalised quiote</p>
-          </div>
-          <div class="faq-item">
-            <h3>Do youoffer payment plans to suite our budget and project needs</h3>
-          </div>
+      <!-- Pricing FAQs -->
+      <div class="faq-category" id="pricing">
+        <div class="faq-item">
+          <h3>How much does your service cost?</h3>
+          <p>Our pricing depends on the scope of the project. Contact us for a personalized quote.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do you offer payment plans?</h3>
+          <p>Yes, we provide flexible payment plans to suit your budget and project needs.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<section id="shop" class="shop-section">
+    <i class="fas fa-cart-shopping icon"></i>
+  <h2>Our Shop</h2>
+  <div class="shop-container">
+    <!-- Product Cards -->
+    <div class="product-card" data-id="1" data-name="Luxury Sofa" data-price="500">
+      <img src="sofa.jpeg" alt="Luxury Sofa">
+      <h3>Luxury Sofa</h3>
+      <p>$500</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card" data-id="2" data-name="Decorative Lamp" data-price="120">
+      <img src="lamp.jpeg" alt="Decorative Lamp">
+      <h3>Decorative Lamp</h3>
+      <p>$120</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card" data-id="3" data-name="Elegant Rug" data-price="300">
+      <img src="rug.jpeg" alt="Elegant Rug">
+      <h3>Elegant Rug</h3>
+      <p>$300</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Cart Section -->
+  <div class="cart-container">
+    <h3>Your Cart</h3>
+    <ul class="cart-items"></ul>
+    <p class="discount"></p>
+    <p class="total">Total: $0</p>
+    <button class="checkout">Checkout</button>
+  </div>
+</section>
+
+<footer class="footer-section">
+  <div class="footer-container">
+    <!-- Branding -->
+    <div class="footer-branding">
+      <h3>DesignX</h3>
+      <p>Transforming Spaces, Enhancing Lives</p>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="footer-social">
+      <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <!-- Newsletter Subscription -->
+    <div class="footer-newsletter">
+      <h4>Subscribe to Our Newsletter</h4>
+      <form id="newsletter-form">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top">↑ Back to Top</button>
+</footer>
+
 
   <script src="script.js"></script>
 </body>

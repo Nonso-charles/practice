@@ -97,16 +97,20 @@ a.active,a:hover {
 }
 
   .explore-header h2 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       text-align: center;
-      padding-top: 40px;
       font-weight: bold;
+      text-transform: uppercase;
+      padding: 40px;
+      line-height: 1.5;
   }
   
-   .line {
-      width: 100px;
-      margin-top: -50px;
-      margin-right: 50px;
+  .icon {
+      color: #cfb53b;
+  }
+  
+  .symbol {
+      color: #f5f5dc;
   }
   
   .explore-header p {
@@ -179,6 +183,9 @@ a.active,a:hover {
     font-size: 2rem;
     font-weight: bold;
     color: #333;
+    text-transform: uppercase;
+    line-height: 1.5;
+    padding: 20px;
 }
 
 .services-container {
@@ -233,13 +240,11 @@ a.active,a:hover {
     font-size: 2rem;
     font-weight: bold;
     color: #333;
-    margin-bottom: 20px;
+    text-transform: uppercase;
+    padding: 30px;
+    line-height: 1.5;
 }
 
-.line-under {
-    width: 100px;
-    margin-top: -60px;
-}
 
 .blog-description {
     font-size: 1.2rem;
@@ -386,10 +391,12 @@ blockquote::after {
 }
 
 .contact-content h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #333;
-    margin-bottom: 10px;
+    text-transform: uppercase;
+    line-height: 1.5;
+    margin-bottom: 30px;
 }
 
 .contact-content p {
@@ -404,6 +411,7 @@ blockquote::after {
     gap: 30px;
     align-items: start;
     justify-content: center;
+    margin-top: 30px;
 }
 
 .contact-info {
@@ -476,6 +484,7 @@ blockquote::after {
     /* Darker gold for hover */
 }
 
+/*----- FAQ section ------*/
 .faq-section {
     text-align: center;
     padding: 3em 1em;
@@ -484,8 +493,8 @@ blockquote::after {
 
 .faq-section h2 {
     font-size: 2rem;
-    margin-bottom: 1.5em;
     color: #333;
+    margin-bottom: 30px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
@@ -507,6 +516,321 @@ blockquote::after {
     font-size: 1rem;
     transition: all 0.3s ease;
 }
+
+.tab.active {
+    background: #333;
+    color: #fff;
+}
+
+.faq-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-category {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.faq-category.active {
+    display: block;
+}
+
+.faq-item {
+    background: #f5f5dc;
+    margin-bottom: 1em;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5em;
+    color: #444;
+}
+
+.faq-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*-----Shop section -----*/
+/* Shop Section */
+.shop-section {
+    padding: 2em;
+    text-align: center;
+    background: #f5f5dc;
+}
+
+.shop-section h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    line-height: 1.5px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Product Cards */
+.shop-container {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 250px;
+    padding: 1em;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5em;
+}
+
+.product-card p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.add-to-cart {
+    padding: 0.5em 1em;
+    background: #cfb53b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background: #218838;
+}
+
+/* Cart Section */
+.cart-container {
+    margin-top: 2em;
+    padding: 1em;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 2em auto;
+}
+
+.cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-items li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-items li button {
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 0.3em 0.6em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-items li button:hover {
+    background: #c82333;
+}
+
+.total {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.checkout {
+    margin-top: 1em;
+    padding: 0.5em 2em;
+    background: #cfb53b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkout:hover {
+    background: #0056b3;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.cart-items li {
+    animation: slideIn 0.5s ease;
+}
+
+/*----- Footer section -----*/
+/* Footer Section */
+.footer-section {
+  background: #333;
+  color: #fff;
+  padding: 2em 1em;
+  text-align: center;
+  position: relative;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Branding */
+.footer-branding {
+  flex: 1;
+}
+
+.footer-branding h3 {
+  font-size: 2rem;
+  color: #cfb53b;
+  margin-bottom: 0.5em;
+}
+
+.footer-branding p {
+  font-size: 1rem;
+  color: #bbb;
+}
+
+/* Social Media Links */
+.footer-social {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  color: #cfb53b;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Newsletter Subscription */
+.footer-newsletter {
+  flex: 1;
+}
+
+.footer-newsletter h4 {
+  margin-bottom: 1em;
+  color: #cfb53b;
+  font-size: 1.2rem;
+}
+
+#newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+#newsletter-form input {
+  padding: 0.7em;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  width: 70%;
+}
+
+#newsletter-form button {
+  padding: 0.7em 1.5em;
+  font-size: 1rem;
+  color: #fff;
+  background: #cfb53b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#newsletter-form button:hover {
+  background: #b2963c;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 0.7em 1em;
+  background: #cfb53b;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: #b2963c;
+}
+
+
 
 @media (max-width: 952px) {
     label.logo {
@@ -613,6 +937,32 @@ blockquote::after {
     /*----- Contact section ----*/
       .contact-container {
       grid-template-columns: 1fr;
+  }
+  
+  /*------ FAQ section ----*/
+ .faq-section h2 {
+     font-size: 1.5rem;
+ }
+ 
+  .faq-tabs {
+      flex-wrap: wrap;
+      gap: 0.5em;
+  }
+  
+  .tab {
+      font-size: 0.9rem;
+      padding: 0.6em 1.2em;
+  }
+  
+  /*---Shop section ----*/
+  .shop-section h2 {
+      font-size: 1.5rem;
+  }
+  
+  /*----- Footer section -----*/
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
   }
 }
 
